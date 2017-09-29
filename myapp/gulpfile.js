@@ -57,10 +57,6 @@ gulp.task('browser-sync', ['nodemon'], function () {
 
 gulp.task('pug', function () {
   return gulp.src('views/*.pug')
-    .pipe(pug({
-      doctype: 'html',
-      pretty: false
-    }))
     .pipe(gulp.dest('dest/html'));
 });
 

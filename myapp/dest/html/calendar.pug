@@ -1,0 +1,30 @@
+extends default
+
+append styles
+  link(rel='stylesheet', type='text/css', href='/stylesheets/calendar.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/fullcalendar.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/fullcalendar.min.css')
+
+append scripts
+  script(type='text/javascript', src='/javascripts/moment.min.js')
+  script(type='text/javascript', src='/javascripts/fullcalendar.js')
+  script(type='text/javascript', src='/javascripts/gcal.js')
+
+block content
+  .card
+    #calendar
+
+  //probably don't need type definitions in Pug, verify though
+  script(type='text/javascript').
+    $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        googleCalendarApiKey: 'AIzaSyD9VcoF3cUM1dM13V5a0RUImGP4BRLIH5A',
+        events: {
+          googleCalendarId: 'jj0278t9epcqh2iv3i4gjuu98o@group.calendar.google.com'
+        },
+        height: 560
+
+        //themeSystem: 'bootstrap3'
+      });
+    });
+
