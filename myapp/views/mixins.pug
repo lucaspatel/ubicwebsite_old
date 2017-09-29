@@ -1,0 +1,11 @@
+mixin officer-card(officer)
+  .card
+    .card-block
+      //img.img-responsive(src='../public/images/officers/#{officer.img}')
+      h3 #{officer.name}
+      h5
+        | #{officer.title} 
+        //| 
+        //a(href='mailto:"#{officer.email2}"') #{officer.email2}
+      p
+        | #{officer.desc}

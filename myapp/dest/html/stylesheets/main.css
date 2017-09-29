@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "slabo";
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Slabo27px-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html {
+  font-family: menlo;
+}
+
+body {
+	background-color: ivory;
+	background: linear-gradient(
+      rgba(64, 140, 170, 0.55), 
+      rgba(64, 140, 170, 0.55)
+    ), url(../images/bg.png);
+	background-position: fixed;
+}
+
+p {
+  color: black;
+	text-align: center;
+	font-family: menlo;
+}
+
+.nav *, .navbar * {
+	font-family: menlo;
+}
+
+.page {
+  padding: 25px;
+}
+
+.jumbotron {
+	background-color: rgba(0, 0, 0, 0.00);
+}
+
+.jumbotron p {
+  font-size: 40px;
+}
+
+.navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.card-title {
+  font-family: menlo;
+  font-weight: bold;
+}
+
+.card {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+#logo {
+  height: auto;
+  width: 15%;
+}
+
+@media (max-width: 415px) {
+  #logo {
+    width: 40%;
+  }
+}
+

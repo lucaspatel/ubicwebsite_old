@@ -1,0 +1,4 @@
+node_modules
+myapp/credentials.js
+/package.json
+.DS_Store

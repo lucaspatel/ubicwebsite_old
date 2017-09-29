@@ -1,0 +1,37 @@
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.navbar-toggler.navbar-toggler-right.pull-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  a.navbar-brand(href='/')
+    img#logo(src='/images/logo.png')
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+    ul.navbar-nav
+      li.nav-item.pull-right
+
+      li.nav-item
+        //a.nav-link(href='#')
+          | Home 
+          span.sr-only (current)
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Events
+        .dropdown-menu.dropdown-menu-right
+          a.dropdown-item(href='#') BIAS
+          a.dropdown-item.disabled(href='#') Speaker Events
+          a.dropdown-item.disabled(href='#') Technical Workshops
+          a.dropdown-item.disabled(href='#') Family System
+          .dropdown-divider
+          a.dropdown-item(href='calendar') Calendar
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') More
+        .dropdown-menu.dropdown-menu-right
+          a.dropdown-item.disabled(href='#') Sponsorships
+          a.dropdown-item.disabled(href='#') Projects
+          .dropdown-divider
+          a.dropdown-item(href='contact') Contact
+
+      
+
+
+    //form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='text', placeholder='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
