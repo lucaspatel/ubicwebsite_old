@@ -28,4 +28,13 @@ router.get('/calendar', function(req, res, next) {
   res.render('calendar');
 });
 
+router.get('/techdev', function(req, res, next) {
+  res.render('techdev');
+});
+
+router.get('/gbm1', function(req, res, next) {
+  res.redirect('https://www.youtube.com/watch?v=xa6wLAJ9umE')
+});
+
+
 module.exports = router;
