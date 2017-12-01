@@ -36,5 +36,10 @@ router.get('/gbm1', function(req, res, next) {
   res.redirect('https://www.youtube.com/watch?v=xa6wLAJ9umE')
 });
 
+//catch all
+router.get(/^(.*)$/, function(req, res, next){
+  res.render(req.params[0].substring(1));
+});
+
 
 module.exports = router;

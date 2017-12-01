@@ -1,3 +1,19 @@
 #calendar {
   margin: 4%;
 }
+
+.row {
+  //margin: 0 auto;
+  justify-content: space-around;
+  display: flex;
+}
+
+#addCard {
+  margin-top: 1rem !important;
+}
+
+p {
+  margin-top: 1rem !important;
+}
+
+//the dominant color, for future reference: #3a87ad

@@ -45,7 +45,7 @@ gulp.task('browser-sync', ['nodemon'], function () {
 
     // informs browser-sync to use the following port for the proxied app
     // notice that the default port is 3000, which would clash with our expressjs
-    port: 4000,
+    port: 3001,
 
     // open the proxied app in safari, my personal browser of choice
     browser: ['safari'],
@@ -75,6 +75,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('bs-reload', function () {
+  console.log("BS RELOAD");
   browserSync.reload();
 });
 

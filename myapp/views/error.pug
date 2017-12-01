@@ -1,6 +1,11 @@
-extends layout
+extends default
+
+append styles
+  link(rel='stylesheet', type='text/css', href='/stylesheets/index.css')
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .jumbotron
+    .content
+      p 404
+      p Something's gone wrong; if you've spotted a bug please contact our #[a(href='mailto:"lpatel@ucsd.edu"') VP External].
+      

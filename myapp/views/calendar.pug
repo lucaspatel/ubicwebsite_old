@@ -2,8 +2,8 @@ extends default
 
 append styles
   link(rel='stylesheet', type='text/css', href='/stylesheets/calendar.css')
-  link(rel='stylesheet', type='text/css', href='/stylesheets/fullcalendar.css')
   link(rel='stylesheet', type='text/css', href='/stylesheets/fullcalendar.min.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/font-awesome.min.css')
 
 append scripts
   script(type='text/javascript', src='/javascripts/moment.min.js')
@@ -11,8 +11,16 @@ append scripts
   script(type='text/javascript', src='/javascripts/gcal.js')
 
 block content
-  .card
-    #calendar
+  .container-fluid
+    .row
+      .card
+        #calendar
+    .row
+      .card#addCard
+        .card-block     
+          button.btn.btn-primary(type='button', onclick="location.href = 'https://calendar.google.com/calendar/r?cid=jj0278t9epcqh2iv3i4gjuu98o@group.calendar.google.com'")
+            p Add to your calendar  #[i.fa.fa-lg.fa-calendar-check-o(aria-hidden='true')]
+
 
   //probably don't need type definitions in Pug, verify though
   script(type='text/javascript').

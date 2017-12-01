@@ -1,0 +1,20 @@
+.row {
+  //margin: 0 auto;
+  justify-content: space-around;
+  display: flex;
+}
+
+.card {
+  margin: 1rem;
+  margin-top: 0%;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+#dlCard, p {
+  margin-top: 1rem !important;
+}
+
+

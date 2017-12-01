@@ -1,0 +1,27 @@
+extends default.pug
+
+append styles
+  link(rel='stylesheet', type='text/css', href='/stylesheets/sponsor.css')
+
+append scripts
+  script(type='text/javascript', src='/javascripts/pdfobject.min.js')
+
+block content
+  .content
+    .container
+      .row(style='margin-top: 1%; width: 90%; text-align: center')
+        .card.mx-auto
+          .card-block
+        .embed-responsive.embed-responsive-210by297(style="overflow:auto;-webkit-overflow-scrolling:touch")
+           object(data='/pdfs/sponsorshipPacketCompressed.pdf', type='application/pdf', width='80%', height='80%')
+            p
+              b Example fallback content
+              | : This browser does not support PDFs. Please download the PDF to view it: 
+              a(href='/pdfs/sponsorshipPacketCompressed.pdf') Download PDF
+              | .
+
+   
+
+
+
+      

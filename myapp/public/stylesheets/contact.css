@@ -1,31 +1,23 @@
-
-
 .card {
   margin: 0.5rem;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 75%;
+  max-width: 270px;
 }
 
-/* this fixes margin bug, remove after official beta */
-
-
-.card-columns {
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: row wrap; 
-  align-items: stretch; 
+#offImg {
+  max-width: 270px;
 }
 
 .card-deck .card {
-  display: block;
-  flex-basis: 33.3%; /* change this value for each breakpoint*/
+    width: initial;
 }
 
-.card-deck .card:not(:last-child) {
-    margin-right: 15px;
+.card-deck {
+  width: 100%;
 }
 
-.card-deck .card:not(:first-child) {
-    margin-left: 15px;
+.container-fluid {
+  text-align: center;
 }
 

@@ -1,13 +1,11 @@
 @font-face {
-  font-family: "slabo";
-  src: url('webfont.eot'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Slabo27px-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: "Menlo";
+  src: url('../fonts/Menlo_Regular.ttf'); /* IE9 Compat Modes */
+  src: url('../fonts/Menlo-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 html {
-  font-family: menlo;
+  font-family: Menlo;
 }
 
 body {
@@ -17,17 +15,10 @@ body {
       rgba(64, 140, 170, 0.55)
     ), url(../images/bg.png);
 	background-position: fixed;
+  font-family: Menlo
 }
 
-p {
-  color: black;
-	text-align: center;
-	font-family: menlo;
-}
 
-.nav *, .navbar * {
-	font-family: menlo;
-}
 
 .page {
   padding: 25px;
@@ -37,9 +28,6 @@ p {
 	background-color: rgba(0, 0, 0, 0.00);
 }
 
-.jumbotron p {
-  font-size: 40px;
-}
 
 .navbar {
     -webkit-border-radius: 0;
@@ -48,7 +36,6 @@ p {
 }
 
 .card-title {
-  font-family: menlo;
   font-weight: bold;
 }
 

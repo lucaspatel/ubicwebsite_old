@@ -31,11 +31,10 @@ db.once('open', function() {
 });
 
 
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -49,7 +48,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('', index)
+app.use('', index);
 app.use('/', index);
 app.use('/users', users);
 
