@@ -1,4 +1,4 @@
-node_modules
-myapp/credentials.js
-/package.json
+/node_modules
+client_secret.json
+credentials.js
 .DS_Store

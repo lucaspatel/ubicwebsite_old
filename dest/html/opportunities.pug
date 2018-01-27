@@ -1,0 +1,14 @@
+extends default.pug
+include mixins.pug
+
+append styles
+  link(rel='stylesheet', type='text/css', href='/stylesheets/contact.css')
+
+block content
+  .content
+    .card-deck-wrapper
+      .card-deck
+        each opp in opportunities
+          +opportunity(opp)
+
+        
