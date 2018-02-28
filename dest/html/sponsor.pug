@@ -2,26 +2,32 @@ extends default.pug
 
 append styles
   link(rel='stylesheet', type='text/css', href='/stylesheets/sponsor.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/font-awesome.min.css')
 
 append scripts
   script(type='text/javascript', src='/javascripts/pdfobject.min.js')
 
 block content
-  .content
-    .container
-      .row(style='margin-top: 1%; width: 90%; text-align: center')
-        .card.mx-auto
-          .card-block
-        .embed-responsive.embed-responsive-210by297(style="overflow:auto;-webkit-overflow-scrolling:touch")
-           object(data='/pdfs/sponsorshipPacketCompressed.pdf', type='application/pdf', width='80%', height='80%')
-            p
-              b Example fallback content
-              | : This browser does not support PDFs. Please download the PDF to view it: 
-              a(href='/pdfs/sponsorshipPacketCompressed.pdf') Download PDF
-              | .
+  .container-fluid
+    .row
+      .card#dlCard
+        .card-block     
+          button.btn.btn-primary(type='button', onclick="location.href = 'https://drive.google.com/a/ucsd.edu/uc?id=1rnt2-NVrsvGGBpWgjaIrhpYbR3sZPHRf&export=download'")
+            p Download the sponsorship packet #[i.fa.fa-lg.fa-download(aria-hidden='true')]
+    .row
+      .col-12
+        .card
+          .card-img-top
+            img.img-responsive(src='images/sponsorship/spon1.jpeg')
+          .card-img-top  
+            img.img-responsive(src='images/sponsorship/spon2.jpeg')
+            img.img-responsive(src='images/sponsorship/spon3.jpeg')
+            img.img-responsive(src='images/sponsorship/spon4.jpeg')
+            img.img-responsive(src='images/sponsorship/spon5.jpeg')
+            img.img-responsive(src='images/sponsorship/spon6.jpeg')
+            img.img-responsive(src='images/sponsorship/spon7.jpeg')
+     
 
-   
 
 
-
-      
+        

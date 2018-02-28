@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-//obviously do not leave db objects in creds.js
-var off = require('../credentials.js').officers;
+var id = require('../credentials.js').id
 var Officer = require('../models/officer.js');
+var gsjson = require('google-spreadsheet-to-json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,11 +17,34 @@ router.get('/home', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   Officer.find({}, function (err, officers) {
     var context = officers[0].toJSON().officers;
-    console.log(context);
     if (err) return res.status(500).send("There was a problem finding the users.");
-    //res.status(200).send((context.officers));
     res.render('contact', {officers: context});
   });
+});
+
+router.get('/opportunities', function(req, res, next) {
+  gsjson({
+    spreadsheetId: '1z2a2uBkNaoeR_TzZyECwbmysafJ3aKeKxGYLuohoBOg',
+    // other options... 
+  })
+  .then(function(result) {
+    result.forEach(function(n) {
+      //console.log(n.timestamp);
+      if(n.labImageOrLogo != undefined) {
+        n.labImageOrLogo = n.labImageOrLogo.replace('open', 'uc');
+      } else {
+        n.labImageOrLogo = "images/opp_default.jpg";
+      }
+    })
+    res.render('opportunities', {opportunities: result});
+      
+  })
+  .catch(function(err) {
+    console.log(err.message);
+    console.log(err.stack);
+    res.status(500).send(err);
+  });
+  
 });
 
 router.get('/calendar', function(req, res, next) {
@@ -35,11 +58,5 @@ router.get('/techdev', function(req, res, next) {
 router.get('/gbm1', function(req, res, next) {
   res.redirect('https://www.youtube.com/watch?v=xa6wLAJ9umE')
 });
-
-//catch all
-router.get(/^(.*)$/, function(req, res, next){
-  res.render(req.params[0].substring(1));
-});
-
 
 module.exports = router;

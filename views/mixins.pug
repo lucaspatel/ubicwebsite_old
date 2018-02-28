@@ -8,4 +8,23 @@ mixin officer-card(officer)
         | #{officer.title} 
         a(href='mailto:"#{officer.email2}"') #{officer.email2}
       p
-        //| #{officer.desc}
+        //| #{officer.desc
+
+mixin opportunity(opp)
+  .card
+    .card-img
+      img#logoImg.img-responsive(src=''+opp.labImageOrLogo)
+      h4#nameTitle #{opp.nameOfLab}
+      h5#descTitle #{opp.shortDescriptionOfProject}
+    .list-group.list-group-flush
+      .list-group-item
+        p #{opp.departmentOrFacilityLabIsLocatedIn}
+      .list-group-item
+        p For: #{opp.schoolYearOfDesiredStudents}
+        p Time committment: #{opp.desiredTimeCommitmentPerWeekInHours}
+        p Prerequisites: #{opp.desiredPriorExperience}
+      .list-group-item
+        p#emailtext (Email #{opp.emailAddress} with your resume attached.)
+        a.btn.btn-primary.text-center(href='mailto:"#{opp.emailAddress}"') Apply
+
+

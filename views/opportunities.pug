@@ -2,13 +2,18 @@ extends default.pug
 include mixins.pug
 
 append styles
-  link(rel='stylesheet', type='text/css', href='/stylesheets/contact.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/opportunities.css')
 
 block content
   .content
-    .card-deck-wrapper
-      .card-deck
-        each opp in opportunities
-          +opportunity(opp)
+    if opportunities.length==0
+      .emptymsg
+        p#msg No open opportunities currently. Please check back soon.
+        p#msg If you'd like to submit an opportunity, please email  #[a(href='mailto:"lpatel@ucsd.edu"') Lucas Patel] for the submission form.
+    else
+      .card-deck-wrapper
+        .card-deck
+          each opp in opportunities
+            +opportunity(opp)
 
-        
+    

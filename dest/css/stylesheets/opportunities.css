@@ -1,0 +1,42 @@
+.card {
+	margin: 0.9rem;
+  height: auto;
+  width: 93%;
+  min-width: 30%;
+}
+
+.card-deck {
+	margin-top: 0.5%;
+  width: 100%;
+}
+
+.card-img {
+	margin-top: 5%;
+	text-align: center;
+}
+
+#nameTitle {
+	text-align: center;
+	padding-top: 3%;
+}
+
+#logoImg {
+	border-radius: 100px;
+  border: 3px solid black;
+	width: 100px;
+	height: 100px;
+}
+
+#emailtext {
+	font-size: 12px;
+}
+
+.emptymsg {
+	padding: 3rem;
+}
+
+p#msg {
+  font-size: 26px;
+  color: black;
+  text-align: center;
+}
